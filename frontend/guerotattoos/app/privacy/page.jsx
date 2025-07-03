@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
         </header>
 
         <p className="text-[#d6d3c9] leading-relaxed">
-          Güero Tattoo Studio respects your privacy. This policy outlines how we collect, use, and protect your personal
+          Guero Tattoo Studio respects your privacy. This policy outlines how we collect, use, and protect your personal
           information when you interact with our site or book a session.
         </p>
 

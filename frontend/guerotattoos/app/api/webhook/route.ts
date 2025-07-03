@@ -5,6 +5,7 @@ import stripe, { Stripe } from 'stripe';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
+  console.log("Received webhook request");
   const sig = req.headers.get('stripe-signature')!;
   const rawBody = await req.text();
 
@@ -20,11 +21,14 @@ export async function POST(req: NextRequest) {
   }
 
   if (event.type === 'checkout.session.completed') {
+    console.log("Checkout session completed:", event.data.object);
     const session = event.data.object as Stripe.Checkout.Session;
     const email = session.customer_email;
     const name = session.metadata?.name;
 
     try {
+      console.log("Sending confirmation email to:", email);
+      console.log("User's name is:", name);
       await resend.emails.send({
         from: process.env.FROM_EMAIL!,
         to: email!,

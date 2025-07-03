@@ -18,7 +18,7 @@ export default function Home() {
             Hand-crafted ink by expert artists. Traditional, realism, blackwork & more.
           </p>
           <a
-            href="#book"
+            href="/book"
             className="inline-block bg-[#f3f0e7] text-black font-medium py-3 px-6 rounded-full hover:bg-[#e1ddd2] transition"
           >
             Book Your Appointment
@@ -41,7 +41,7 @@ export default function Home() {
       <h2 className="text-3xl font-semibold mb-8">Come check us out</h2>
 
       <p className="text-[#d6d3c9] max-w-xl mx-auto mb-10 text-sm leading-relaxed">
-        Güero Tattoo Studio is located in Las Vegas, Nevada — by appointment only. Book online and we’ll send you directions and parking info upon confirmation.
+        Guero Tattoo Studio is located in Las Vegas, Nevada — by appointment only. Book online and we’ll send you directions and parking info upon confirmation.
       </p>
 
       <div className="max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg border border-[#2a2a2a]">

@@ -80,6 +80,9 @@ export default function BookPage() {
         <p className="text-center text-[#aaa] mb-6">
           Reserve your spot with a $5 deposit
         </p>
+        <p className="text-sm text-center text-[#d6d3c9] mb-4">
+          This is currently a demo page. The booking system will not charge you anything.
+        </p>
         <div className="border-t border-[#333] mb-8" />
 
         <form onSubmit={handleSubmit} className="space-y-6">

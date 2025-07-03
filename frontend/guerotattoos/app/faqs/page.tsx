@@ -8,7 +8,7 @@ export default function FAQsPage() {
     {
       question: "Where is the studio located?",
       answer:
-        "Güero Tattoo Studio is based in Las Vegas, Nevada — the heart of Sin City. Location details will be shared upon booking confirmation.",
+        "Guero Tattoo Studio is based in Las Vegas, Nevada — the heart of Sin City. Location details will be shared upon booking confirmation.",
     },
     {
       question: "Do you accept walk-ins?",

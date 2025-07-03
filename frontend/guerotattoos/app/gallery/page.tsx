@@ -1,5 +1,6 @@
 'use client';
 
+import InstagramRedirect from "@/components/InstagramRedirect";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -10,6 +11,9 @@ const images = [
   "/gallery/tattoo4.jpg",
   "/gallery/tattoo5.jpg",
   "/gallery/tattoo6.jpg",
+  "/gallery/tattoo7.jpg",
+  "/gallery/tattoo8.jpg",
+  "/gallery/tattoo9.jpg",
 ];
 
 export default function GalleryPage() {
@@ -20,8 +24,17 @@ export default function GalleryPage() {
       <section className="max-w-6xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-wider">Gallery</h1>
-          <p className="text-[#aaa] text-sm mt-2">Some of my favorite work — scroll through and get inspired.</p>
+          <p className="text-[#aaa] text-sm mt-2">
+            Some of my favorite work — scroll through and get inspired.
+          </p>
+          <br />
+          <p>Check out some more pieces on my instagram.</p>
+          <br />
+          <div className="flex justify-center mt-2">
+            <InstagramRedirect />
+          </div>
         </header>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {images.map((src, index) => (
