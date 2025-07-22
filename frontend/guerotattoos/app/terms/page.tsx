@@ -5,7 +5,7 @@ export default function TermsPage() {
         <header className="text-center">
           <h1 className="text-4xl font-bold tracking-wide mb-2">Terms of Service</h1>
           <p className="text-[#aaa] text-sm">
-            By using Guero Tattoo Studio's website or services, you agree to the following terms.
+            By using Guero Tattoo Studio&apos;s website or services, you agree to the following terms.
           </p>
         </header>
 
@@ -34,7 +34,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-xl font-semibold text-[#f3f0e7] mb-2">4. Refunds</h2>
             <p>
-              All sales are final. Deposits are non-refundable unless the appointment is canceled with 48 hours’ notice.
+              All sales are final. Deposits are non-refundable unless the appointment is canceled with 48&nbsp;hours&apos; notice.
             </p>
           </div>
 

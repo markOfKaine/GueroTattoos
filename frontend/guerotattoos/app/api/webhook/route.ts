@@ -16,8 +16,11 @@ export async function POST(req: NextRequest) {
       sig,
       process.env.STRIPE_WEBHOOK_SECRET!
     );
-  } catch (err: any) {
-    return NextResponse.json({ error: `Webhook error: ${err.message}` }, { status: 400 });
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      return NextResponse.json({error: 'Webook error: ${err.message}'}, {status:400});
+    }
+    return NextResponse.json({ error: 'Unknown Webhook error.' }, { status: 400 });
   }
 
   if (event.type === 'checkout.session.completed') {
@@ -41,10 +44,9 @@ export async function POST(req: NextRequest) {
           </div>
         `,
       });
-    } catch (emailErr: any) {
-      console.error("Email send error:", emailErr);
+    } catch {
+      return NextResponse.json({error: "Webhook error."}, {status: 400});
     }
   }
-
   return NextResponse.json({ received: true });
 }

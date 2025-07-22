@@ -1,5 +1,4 @@
 import WaterMarkLogo from "@/components/WaterMarkLogo";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -47,13 +46,13 @@ export default function Home() {
       <div className="max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg border border-[#2a2a2a]">
         <iframe
           title="Guero Tattoo Studio Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.153946610606!2d-115.1398304847448!3d36.16994197997905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c437e5fbf645%3A0x9f0ba1d67c1ea6db!2sLas%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1687372378162!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206252.80376352507!2d-115.3398070012034!3d36.12516446071526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1753216269542!5m2!1sen!2sus"
           width="100%"
           height="300"
           style={{ border: 0 }}
           allowFullScreen={false}
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
       </div>
     </section>

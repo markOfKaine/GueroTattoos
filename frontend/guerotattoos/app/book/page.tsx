@@ -18,12 +18,12 @@ export default function BookPage() {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
 
-    const { name, email, phone, date } = formData;
+    const { email, phone, date } = formData;
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -64,8 +64,12 @@ export default function BookPage() {
       if (!data.url) throw new Error("Failed to create checkout session");
 
       window.location.href = data.url;
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+    } catch (err) {
+     if (err instanceof Error) {
+       setError(err.message || 'Something went wrong');
+     } else {
+       setError('Something went wrong');
+     }
     } finally {
       setLoading(false);
     }
